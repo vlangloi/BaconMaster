@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="BaconMaster.Views.GameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="500"
+             d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Informations"
+                  Grid.Column="0"
+                  Grid.Row="0"
+                  Margin="5">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="ROUND :"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold" />
+                <Label x:Name="CurrentRound"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+                <Label Content="ACTIVE PLAYER :"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold" />
+                <Label x:Name="CurrentActivePlayer"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Dices"
+                  Grid.Column="0"
+                  Grid.Row="1"
+                  Margin="5">
+        </GroupBox>
+        <GroupBox Header="Player Individual Actions"
+                  Grid.Column="0"
+                  Grid.Row="2"
+                  Margin="5">
+            <StackPanel Orientation="Vertical">
+                <Button Content="1-Roll All"
+                        x:Name="RollAll"
+                        Margin="3" />
+                <Button Content="3-Lock some dice(s)"
+                        x:Name="LockDiceWithRule"
+                        Margin="3" />
+                <Button Content="3-Reroll"
+                        x:Name="Reroll"
+                        Margin="3" />
+                <Button Content="4-Apply Dice Result"
+                        x:Name="ApplyDiceResult"
+                        Margin="3" />
+                <Button Content="5-Next Player Turn"
+                        x:Name="NextPlayerTurn"
+                        Margin="3"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Automatic Actions"
+                  Grid.Column="0"
+                  Grid.Row="3"
+                  Margin="5">
+            <StackPanel Orientation="Vertical">
+                <Button Content="Execute Player Turn"
+                        x:Name="ExecutePlayerTurn"
+                        Margin="3" />
+                <Button Content="Execute Full Round"
+                        x:Name="ExecuteFullRound"
+                        Margin="3" />
+                <Button Content="Play Until Winner"
+                        x:Name="PlayFullGame"
+                        Margin="3" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>
